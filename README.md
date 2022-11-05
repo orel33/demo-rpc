@@ -84,9 +84,12 @@ $ ./client localhost
 
 ## Biblio
 
-* Sun RPC version 2 (RFC 1057) <https://www.rfc-editor.org/rfc/rfc1057.txt>
-* <https://users.cs.cf.ac.uk/Dave.Marshall/C/node34.html>
-* <https://docs.oracle.com/cd/E19683-01/816-1435/rpcgenpguide-24243/index.html>
+* ONC RPC: <http://en.wikipedia.org/wiki/ONC_RPC>
+* RFC 1831 RPC: [Remote Procedure Call Protocol specification: Version 2](https://www.ietf.org/rfc/rfc1831.txt)
+* RFC 1832 XDR: [External Data Representation Standard](https://www.ietf.org/rfc/rfc1832.txt)
+* RFC 2695: [Authentication Mechanisms for ONC RPC](https://www.ietf.org/rfc/rfc2695.txt)
+* Tutorial: <https://users.cs.cf.ac.uk/Dave.Marshall/C/node34.html>
+* Tutorial: <https://docs.oracle.com/cd/E19683-01/816-1435/rpcgenpguide-24243/index.html>
 
 ---
 <aurelien.esnard@u-bordeaux.fr>
