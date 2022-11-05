@@ -88,8 +88,10 @@ If wireshark doesn't know the program number, it doesn't do the RPC decode,
 *unless* "Dissect unknown RPC program numbers" is checked in the preferences.
 After this, you can see both the request and replies.
 
-Here is the capture of the RPC demo with UDP transport layer :
-[rpc-demo-udp.pcap](rpc-demo-udp.pcap).
+Here are the capture of the RPC demo with both UDP & TCP transport layers :
+
+* [rpc-demo-udp.pcap](rpc-demo-udp.pcap)
+* [rpc-demo-tcp.pcap](rpc-demo-tcp.pcap)
 
 ## Biblio
 
