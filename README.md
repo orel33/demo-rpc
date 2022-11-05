@@ -82,6 +82,15 @@ $ ./client localhost
   result: 10 + 20 = 30
 ```
 
+## About Wireshark
+
+If wireshark doesn't know the program number, it doesn't do the RPC decode,
+*unless* "Dissect unknown RPC program numbers" is checked in the preferences.
+After this, you can see both the request and replies.
+
+Here is the capture of the RPC demo with UDP transport layer :
+[rpc-demo-udp.pcap](rpc-demo-udp.pcap).
+
 ## Biblio
 
 * ONC RPC: <http://en.wikipedia.org/wiki/ONC_RPC>
