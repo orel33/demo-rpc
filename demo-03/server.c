@@ -36,13 +36,6 @@ static int *addproc_1(struct args *p, struct svc_req *rqstp)
 
 static void addprog_1(struct svc_req *rqstp, register SVCXPRT *transp)
 {
-
-    // if (rqstp->rq_proc != ADDPROC)
-    // {
-    //     svcerr_noproc(transp);
-    //     return;
-    // }
-
     switch (rqstp->rq_proc)
     {
 
@@ -74,14 +67,6 @@ static void addprog_1(struct svc_req *rqstp, register SVCXPRT *transp)
         svcerr_noproc(transp);
         return;
     }
-
-    // if (!svc_freeargs(transp, (xdrproc_t)xdr_args, (caddr_t)&arg))
-    // {
-    //     fprintf(stderr, "%s", "unable to free arguments");
-    //     exit(EXIT_FAILURE);
-    // }
-
-    return;
 }
 
 int main(int argc, char **argv)

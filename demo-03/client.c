@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
 	char *host = argv[1];
 
 	CLIENT *clnt = clnt_create(host, ADDPROG, ADDVER, "tcp");
+	// CLIENT *clnt = clnt_create(host, ADDPROG, ADDVER, "udp");
 
 	if (clnt == NULL)
 	{
