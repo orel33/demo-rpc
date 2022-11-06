@@ -95,12 +95,10 @@ Here are the capture of the RPC demo with both UDP & TCP transport layers :
 
 ## Biblio
 
-* ONC RPC: <http://en.wikipedia.org/wiki/ONC_RPC>
-* RFC 1831 RPC: [Remote Procedure Call Protocol specification: Version 2](https://www.ietf.org/rfc/rfc1831.txt)
+* ONC/SUN RPC: <http://en.wikipedia.org/wiki/ONC_RPC>
+* RFC 1831 RPC: [Remote Procedure Call Protocol Version 2](https://www.ietf.org/rfc/rfc1831.txt)
 * RFC 1832 XDR: [External Data Representation Standard](https://www.ietf.org/rfc/rfc1832.txt)
-* RFC 2695: [Authentication Mechanisms for ONC RPC](https://www.ietf.org/rfc/rfc2695.txt)
-* Tutorial: <https://users.cs.cf.ac.uk/Dave.Marshall/C/node34.html>
-* Tutorial: <https://docs.oracle.com/cd/E19683-01/816-1435/rpcgenpguide-24243/index.html>
+* RFC 1833 Port Mapper: [Binding Protocols for ONC RPC Version 2](https://www.ietf.org/rfc/rfc1833.txt)
 
 ---
 <aurelien.esnard@u-bordeaux.fr>
