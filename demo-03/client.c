@@ -2,7 +2,6 @@
 
 #include <stdlib.h>
 #include <assert.h>
-#include <stdbool.h>
 #include <rpc/rpc.h>
 
 struct args
