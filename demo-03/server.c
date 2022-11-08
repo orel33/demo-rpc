@@ -27,13 +27,6 @@ bool_t xdr_args(XDR *xdrs, struct args *p)
     return TRUE;
 }
 
-static int *addproc_1(struct args *p, struct svc_req *rqstp)
-{
-    static int result;
-    result = p->arg1 + p->arg2;
-    return &result;
-}
-
 static void addprog_1(struct svc_req *rqstp, register SVCXPRT *transp)
 {
     switch (rqstp->rq_proc)
