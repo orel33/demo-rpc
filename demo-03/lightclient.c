@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <rpc/rpc.h>
+#include <rpc/xdr.h>
 
 #define ADDPROG ((u_long)0x20000199)
 #define ADDVER ((u_long)1)
