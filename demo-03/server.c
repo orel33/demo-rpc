@@ -40,11 +40,13 @@ static void addprog_1(struct svc_req *rqstp, register SVCXPRT *transp)
     {
 
     case NULLPROC:
+        /* By convention, procedure zero of any protocol takes no parameters and returns no results.*/
+        printf("call null proc (%d)...\n", rqstp->rq_proc);
         svc_sendreply(transp, (xdrproc_t)xdr_void, NULL);
         return;
 
     case ADDPROC:
-        printf("call add proc...\n");
+        printf("call add proc (%d)...\n", rqstp->rq_proc);
         struct args arg;
         memset((char *)&arg, 0, sizeof(struct args));
         int ret = svc_getargs(transp, (xdrproc_t)xdr_args, (caddr_t)&arg);
@@ -64,6 +66,7 @@ static void addprog_1(struct svc_req *rqstp, register SVCXPRT *transp)
         break;
 
     default:
+        printf("call invalid proc (%d)...\n", rqstp->rq_proc);
         svcerr_noproc(transp);
         return;
     }
@@ -83,7 +86,7 @@ int main(int argc, char **argv)
     bool regudp = svc_register(transpudp, ADDPROG, ADDVER, addprog_1, IPPROTO_UDP);
     assert(regudp);
 
-    // bool reg = svc_register(transp, ADDPROG, ADDVER, addprog_1, 0); // dont register in portmapper
+    // bool reg = svc_register(transp, ADDPROG, ADDVER, addprog_1, 0); // dont register in rpcbind
 
     svc_run();
 
