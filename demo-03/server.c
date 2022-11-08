@@ -1,11 +1,11 @@
 // RPC server for add.x
 
 #include <stdio.h>
-#include <stdbool.h>
 #include <stdlib.h>
 #include <assert.h>
 #include <string.h>
 #include <rpc/rpc.h>
+#include <rpc/xdr.h>
 
 struct args
 {
@@ -74,12 +74,12 @@ int main(int argc, char **argv)
     register SVCXPRT *transpudp = svcudp_create(RPC_ANYSOCK);
     assert(transpudp);
 
-    bool regtcp = svc_register(transptcp, ADDPROG, ADDVER, addprog_1, IPPROTO_TCP);
+    bool_t regtcp = svc_register(transptcp, ADDPROG, ADDVER, addprog_1, IPPROTO_TCP);
     assert(regtcp);
-    bool regudp = svc_register(transpudp, ADDPROG, ADDVER, addprog_1, IPPROTO_UDP);
+    bool_t regudp = svc_register(transpudp, ADDPROG, ADDVER, addprog_1, IPPROTO_UDP);
     assert(regudp);
 
-    // bool reg = svc_register(transp, ADDPROG, ADDVER, addprog_1, 0); // dont register in rpcbind
+    // bool_t reg = svc_register(transp, ADDPROG, ADDVER, addprog_1, 0); // dont register in rpcbind
 
     svc_run();
 

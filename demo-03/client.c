@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <rpc/rpc.h>
+#include <rpc/xdr.h>
 
 struct args
 {
