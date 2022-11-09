@@ -3,7 +3,9 @@
 ## Installation
 
 ```bash
-$ sudo apt install rpcbind rpcsvc-proto
+
+# install rpcbing & tirpc (transport-independant RPC library)
+$ sudo apt install rpcbind rpcsvc-proto libtirpc-dev libtirpc3
 
 $ rpcinfo -p
    program vers proto   port  service
@@ -13,10 +15,6 @@ $ rpcinfo -p
     100000    4   udp    111  portmapper
     100000    3   udp    111  portmapper
     100000    2   udp    111  portmapper
-
-
-# install transport-independant RPC library
-$ sudo apt install libtirpc-dev libtirpc3
 ```
 
 ## Demo 00
