@@ -39,11 +39,12 @@ int main(int argc, char *argv[])
     arg.arg2 = 20;
     int res = 0;
 
+    // Nota Bene: callrpc() uses only UDP/IP as a transport.
     int error = callrpc(host, ADDPROG, ADDVER, ADDPROC,
                         (xdrproc_t)xdr_args, &arg, (xdrproc_t)xdr_int, &res);
     if (error != 0)
     {
-        fprintf(stderr, "error: callrpc failed: %d \n", error);
+        clnt_perrno(error);
         exit(EXIT_FAILURE);
     }
 

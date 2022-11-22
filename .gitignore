@@ -1,0 +1,4 @@
+*.o
+client
+lightclient
+server

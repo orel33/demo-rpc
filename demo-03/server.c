@@ -69,17 +69,20 @@ int main(int argc, char **argv)
 {
     pmap_unset(ADDPROG, ADDVER);
 
+    /* TCP */
     register SVCXPRT *transptcp = svctcp_create(RPC_ANYSOCK, 0, 0);
     assert(transptcp);
-    register SVCXPRT *transpudp = svcudp_create(RPC_ANYSOCK);
-    assert(transpudp);
-
     bool_t regtcp = svc_register(transptcp, ADDPROG, ADDVER, addprog_1, IPPROTO_TCP);
     assert(regtcp);
+
+    /* UDP */
+    register SVCXPRT *transpudp = svcudp_create(RPC_ANYSOCK);
+    assert(transpudp);
     bool_t regudp = svc_register(transpudp, ADDPROG, ADDVER, addprog_1, IPPROTO_UDP);
     assert(regudp);
 
-    // bool_t reg = svc_register(transp, ADDPROG, ADDVER, addprog_1, 0); // dont register in rpcbind
+    // bool_t reg = svc_register(transpudp, ADDPROG, ADDVER, addprog_1, 0); // dont register in rpcbind
+    // assert(regudp);
 
     svc_run();
 
