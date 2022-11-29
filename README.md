@@ -123,6 +123,24 @@ $ ./client localhost
   echo result: hello
 ```
 
+## Demo 05
+
+Here, we have the same demo as the previous one, but we remove the use of
+`rpcbind` for both client and server. So that, the client is directly connected
+to the RPC server. This code is only available for UDP transport layer.
+
+```bash
+# compilation
+$ cd demo-05
+$ make
+# launch server for test program (listening on port 7777)
+$ ./server 7777
+# launch client (in another terminal)
+$ ./client localhost 7777
+  add result: 10 + 20 = 30
+  echo result: hello
+```
+
 ## About Wireshark
 
 If wireshark doesn't know the program number, it doesn't do the RPC decode,
