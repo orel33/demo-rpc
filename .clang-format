@@ -1,0 +1,14 @@
+# clang format style by aurelien.esnard@u-bordeaux.fr
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+---
+Language: Cpp
+BasedOnStyle: Google
+ColumnLimit: 120
+TabWidth: 8
+UseTab: Never
+DerivePointerAlignment: false
+PointerAlignment: Left
+# BreakBeforeBraces: Attach
+BreakBeforeBraces: Linux
+---
+
